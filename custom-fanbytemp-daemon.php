@@ -20,9 +20,9 @@ declare(ticks=1);
 
 // Init constants
 const FAN_COMMAND = 'fan';
-const CUR_WORKER = 'c94e13';
+const CUR_WORKER = 'ae073a';
 const GLOBAL_FAN_COMMAND = 'globalfan';
-const GLOBAL_FAN_DEFAULT = 85;
+const GLOBAL_FAN_DEFAULT = 20;
 const CR = "\n";
 const LOCAL_CONF = '/home/ethos/local.conf';
 #const LOCAL_CONF = 'test/sample_local.conf';
@@ -117,15 +117,15 @@ function read_fan()
 function fan_percent($temp)
 {
     if ($temp < 30) {
-        return 40;
+        return 20;
     }
     if ($temp >= 30 && $temp < 50) {
-        return round($temp / 2 + 25);
+        return round($temp / 2 + 10);
     }
-    if ($temp >= 50 && $temp < 80) {
-        return round($temp);
+    if ($temp >= 50 && $temp < 70) {
+        return round($temp / 2 + 15);
     }
-    if ($temp >= 80 && $temp < 90) {
+    if ($temp >= 70 && $temp < 90) {
         return round($temp * 2 - 80);
     }
     //$temp>=90

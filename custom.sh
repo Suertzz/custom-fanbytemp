@@ -8,6 +8,7 @@
 # Example of a php script running as user root:
 # sudo php /path/to/my/script.php
 
-/home/ethos/custom-fanbytemp.sh
+sudo bash /home/ethos/custom-fanbytemp.sh
+#sudo bash /home/ethos/log.sh
 
 exit 0
